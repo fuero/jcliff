@@ -132,7 +132,7 @@
         <configuration>
           <copyright>2013, Red Hat, Inc. and/or its affiliates.</copyright>
           <name>${project.artifactId}</name>
-          <release>1</release>
+          <release>${rpm.release}</release>
           <group>Applications/File</group>
           <specfileName>redhat-sd-${project.artifactId}.spec</specfileName>
           <defaultDirmode>755</defaultDirmode>
@@ -193,6 +193,6 @@
     </plugins>
   </build>
   <properties>
-     <rpm.release>1</rpm.release>
+     <rpm.release>3</rpm.release>
   </properties>
 </project>

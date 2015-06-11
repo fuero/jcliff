@@ -34,7 +34,7 @@ defaultRole.rule.1=/core-service=management/access=authorization/role-mapping=${
 defaultRole.precedence=20
 
 match.addRoleMapping=add:/role-mapping/*
-addRoleMapping.rule.1=/core-service=management/access=authorization/role-mapping=${name(.)}:add(include-all=${value(include-all)},exclude=${value(exclude)})
+addRoleMapping.rule.1=/core-service=management/access=authorization/role-mapping=${name(.)}:add(include-all=${value(include-all)})
 addRoleMapping.refresh=true
 addRoleMapping.precedence=30
 
