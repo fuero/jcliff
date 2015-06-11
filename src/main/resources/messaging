@@ -82,6 +82,14 @@ addSecuritySettingRole.rule=/subsystem=messaging/hornetq-server=${name(../../../
 addSecuritySettingRole.refresh=true
 addSecuritySettingRole.precedence=60
 
+match.addSecuritySettingRoleAttr=add:/messaging/hornetq-server/*/security-setting/*/role/*/*
+addSecuritySettingRoleAttr.rule=/subsystem=messaging/hornetq-server=${name(../../../../..)}/security-setting=${name(../../..)}/role=${name(..)}:write-attribute(name=${name(.)}, value=${value(.)})
+addSecuritySettingRoleAttr.precedence=65
+
+match.modifySecuritySettingRoleAttr=modify:/messaging/hornetq-server/*/security-setting/*/role/*/*
+modifySecuritySettingRoleAttr.rule=/subsystem=messaging/hornetq-server=${name(../../../../..)}/security-setting=${name(../../..)}/role=${name(..)}:write-attribute(name=${name(.)}, value=${value(.)})
+modifySecuritySettingRoleAttr.precedence=70
+
 match.removeSecuritySettingRole=remove:/messaging/hornetq-server/*/security-setting/*/role/*
 removeSecuritySettingRole.rule=/subsystem=messaging/hornetq-server=${name(../../../..)}/security-setting=${name(../..)}/role=${name(.)}:remove
 removeSecuritySettingRole.refresh=true
